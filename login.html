@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+
+<body>
+    <section class="sub-header-login">
+        <nav>
+            <a href="index.html"><img src="mainlogo.jpg"></a>
+            <div class="nav-links" id="navLinks">
+
+                <h6 class="iconclose" onclick="hideMenu()">&#10006;</h6>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN/SIGNUP</a></li>
+                </ul>
+            </div>
+            <h6 class="iconbars" onclick="showMenu()">&#9776;</h6>
+        </nav>
+
+        <div class="card">
+            <div class="inner-box" id="card">
+                <div class="card-front" id="card-front">
+                    <h2>Login Here</h2>
+                    <form>
+                        <input type="email" name="email" placeholder="Enter Email Here">
+                        <input type="password" name="" placeholder="Enter Password Here">
+                        <button class="btnn"><a href="#">Login</a></button>
+                    </form>
+                    <button type="button" class="btn" onclick="openRegister ()">I'm new here </button>
+                    <a href="">Forgot Password?</a>
+                </div>
+                <div class="card-back" id="card-back">
+                    <h2>SIGN UP</h2>
+                    <form>
+                        <input type="text" class="input-box" placeholder="First Name" required>
+                        <input type="text" class="input-box" placeholder="Last Name" required>
+                        <input type="email" class="input-box" placeholder="EmailId" required>
+                        <input type="password" class="input-box" placeholder="Password" required>
+                        <input type="text" class="input-box" placeholder="Phone Number" required>
+                        <button class="btnn"><a href="#">Submit</a></button>
+                    </form>
+                    <button type="button" class="btn" onclick="openLogin()">I've an account</button>
+                    <a href="">Forgot Password?</a>
+                </div>
+            </div>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+    <script async defer>
+        var card = document.getElementById("card");
+
+        function openRegister() {
+            card.style.transform = "rotateY(180deg)";
+        }
+
+        function openLogin() {
+
+            card.style.transform = "rotateY(0deg)";
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

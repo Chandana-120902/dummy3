@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="mainlogo.jpg"></a>
+            <div class="nav-links" id="navLinks">
+
+                <h6 class="iconclose" onclick="hideMenu()">&#10006;</h6>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="login.html">LOGIN/SIGNUP</a></li>
+                </ul>
+            </div>
+            <h6 class="iconbars" onclick="showMenu()">&#9776;</h6>
+        </nav>
+
+        <div class="text-box">
+            <h1>Kanban Board</h1>
+            <p>Visualise your progress on digital Kanban Boards <br>and see your team move tasks <br>from to-do to done.</p>
+            <a href="" class="hero-btn">Visit Us To Know More</a>
+        </div>
+
+
+
+    </section>
+
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
